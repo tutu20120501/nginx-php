@@ -3,16 +3,22 @@ FROM wonderfall/nginx-php:7.4
 ARG NEXTCLOUD_VERSION=19.0.0
 ARG GPG_nextcloud="2880 6A87 8AE4 23A2 8372  792E D758 99B9 A724 937A"
 
-ENV UID=991 GID=991 \
+ENV UID=1024 GID=101 \
     UPLOAD_MAX_SIZE=10G \
     APC_SHM_SIZE=128M \
     OPCACHE_MEM_SIZE=128 \
     MEMORY_LIMIT=512M \
     CRON_PERIOD=15m \
     CRON_MEMORY_LIMIT=1g \
-    TZ=Etc/UTC \
-    DB_TYPE=sqlite3 \
-    DOMAIN=localhost
+    TZ=Asia/Shanghai \
+    DB_TYPE=mysql \
+    DOMAIN=localhost \
+    DB_NAME= \
+    DB_USER= \
+    DB_PASSWORD= \
+    DB_HOST= \
+    ADMIN_USER= \
+    ADMIN_PASSWORD=
 
 RUN apk -U upgrade \
  && apk add -t build-dependencies \

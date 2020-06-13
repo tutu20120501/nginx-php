@@ -1,4 +1,4 @@
-Base image for tutu20120501/nextcloud.
+tutu20120501/nextcloud 基础镜像。
 
 # BUILD IMAGE
 ## Build arguments
@@ -7,7 +7,7 @@ Base image for tutu20120501/nextcloud.
 * NGINX_GPG : Nginx gpg fingerprint
 * NGINX_CONF : Nginx build arguments (default : see Dockerfile)
 * PHP_VER : PHP version (default : latest version)
-* PHP_MIRROR: Mirror for download PHP (default : http://fr2.php.net)
+* PHP_MIRROR: Mirror for download PHP (default : http://cn2.php.net)
 * PHP_GPG : PHP gpg fingerprint
 * PHP_CONF : PHP build arguments (default : see Dockerfile)
 * PHP_EXT_LIST : PHP extensions list, for install there (default : see Dockerfile)
@@ -15,8 +15,8 @@ Base image for tutu20120501/nextcloud.
 * CUSTOM_PKGS : Necessary package for PHP extension (default : see Dockerfile)
 # Configuration
 ## Environments
-* UID : Choose uid for launch rtorrent (default : 991)
-* GID : Choose gid for launch rtorrent (default : 991)
+* UID : Choose uid for launch rtorrent (default : 1024)
+* GID : Choose gid for launch rtorrent (default : 101)
 ## Volumes
 * /nginx/sites-enabled : Place your vhost here
 * /nginx/log : Log emplacement

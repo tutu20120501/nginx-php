@@ -7,11 +7,11 @@ ARG PHP_VER=7.4.6
 ARG LIBICONV_VERSION=1.16
 
 LABEL description="nginx + php image based on Alpine" \
-      maintainer="Wonderfall <wonderfall@targaryen.house>" \
+      maintainer="tutu20120501 <aduse001@163.com>" \
       php_version="PHP v$PHP_VER built from source" \
       nginx_version="nginx v$NGINX_VER built from source"
 
-ARG PHP_MIRROR=http://ch1.php.net
+ARG PHP_MIRROR=http://cn2.php.net
 
 ARG NGINX_CONF=" \
     --prefix=/nginx \
